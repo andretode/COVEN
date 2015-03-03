@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B917433-14CF-4362-BDAF-D0F578B4575D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COVEN</RootNamespace>
+    <AssemblyName>COVEN</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Temp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>124056D9AD23F4C62B8C4443DEB8E6A2C1772946</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>COVEN_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>COVEN.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="covenDataSet.cs">
+      <DependentUpon>covenDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="covenDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>covenDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Venda.cs" />
+    <Compile Include="Model\ProdutoVenda.cs" />
+    <Compile Include="Service\VendaService.cs" />
+    <Compile Include="Util\UtilGeral.cs" />
+    <Compile Include="View\FormFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFormaPagamento.Designer.cs">
+      <DependentUpon>FormFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDebitoVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDebitoVendedor.Designer.cs">
+      <DependentUpon>FormDebitoVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormListarVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListarVendas.Designer.cs">
+      <DependentUpon>FormListarVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormNovaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNovaVenda.Designer.cs">
+      <DependentUpon>FormNovaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormProduto.Designer.cs">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRelatorioNotaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRelatorioNotaVenda.Designer.cs">
+      <DependentUpon>FormRelatorioNotaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormVendedor.Designer.cs">
+      <DependentUpon>FormVendedor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FormFormaPagamento.resx">
+      <DependentUpon>FormFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDebitoVendedor.resx">
+      <DependentUpon>FormDebitoVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormListarVendas.resx">
+      <DependentUpon>FormListarVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNovaVenda.resx">
+      <DependentUpon>FormNovaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FormProduto.resx">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorioNotaVenda.resx">
+      <DependentUpon>FormRelatorioNotaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormVendedor.resx">
+      <DependentUpon>FormVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportNotaVenda.rdlc" />
+    <None Include="covenDataSet.xsc">
+      <DependentUpon>covenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="covenDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>covenDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="covenDataSet.xss">
+      <DependentUpon>covenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="COVEN_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\COVEN.Model.Venda.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
