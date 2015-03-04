@@ -41,4 +41,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Arquivos e diretorios que eu quero ignorar
 *.exe
+COVEN\bin\
+COVEN\obj\*
