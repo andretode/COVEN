@@ -44,5 +44,6 @@ Temporary Items
 
 # Arquivos e diretorios que eu quero ignorar
 *.exe
-COVEN\bin\
-COVEN\obj\*
+COVEN/bin
+COVEN/obj
+SetupCoven/SetupCoven/Express
